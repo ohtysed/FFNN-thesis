@@ -19,15 +19,24 @@ namespace FeedforwardNN
             
 
             public void inputlayer(byte[] Input)
-                {
-              inputs = new double[Input.Length];
+            {
+                inputs = new double[Input.Length];
                 for (int i = 0; i < Input.Length; i++)
-                    {
-                    inputs[i] = ((double)Input[i])/255;
-                    }
+                {
+                    inputs[i] = linearmapping(Input[i]);
                 }
+            }
 
-          
+        // https://www.math.uh.edu/~jiwenhe/math4377/lectures/sec2_2.pdf
+            public double linearmapping(byte Input) 
+            {
+       // https://stackoverflow.com/questions/57823085/my-linear-map-function-is-not-giving-right-answers
+            var newSize = 1 - (-1);
+            var oldSize = 255 - 0;
+            var oldScale = (double)Input - 0;
+            return (newSize * oldScale / oldSize) + (-1);
+        
+            }
 
         }
 

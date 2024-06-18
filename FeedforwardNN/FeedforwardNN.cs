@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace FeedforwardNN
 {
@@ -16,9 +17,10 @@ namespace FeedforwardNN
         public Hiddenlayer hiddenlayer;
 
         public double learningrate = 0.01;
-        public double MSEtrain = 0; // for all patterns tot average
+        public double MSEtrain = 0;
+         
         public int wrong = 0;
-        public int expect;
+        public double expect = 0.0;
 
         public Collection<Image> training_data;
         public Collection<Image> test_data;
@@ -34,26 +36,35 @@ namespace FeedforwardNN
             training_data = Train_data;
             test_data = Test_data;
             create();
+
             
         }
 
-        // we read and train all the training data
+        // we read and train all the training data, you can notice that I dont reset the weights anywhere,
+        // only forward prop  &activate with new data
+        //
         public void readandtrainpattern() 
         {
-            foreach (var item in training_data)
+            for (int i = 0;  i < 30; i++)
             {
-                inputlayer.inputlayer(item.Data);
-                hiddenlayer.setNeuron();
-                setexpectation(item.Label);
-                active();
-                MSEtrain += outputlayer.MSE;
+                foreach (var item in training_data) // the training set was repeated 30 times and not the patterns themselves
+                {
 
+                    inputlayer.inputlayer(item.Data);
+                    hiddenlayer.setNeuron();
+                    setexpectation(item.Label);
+                    active();
+                    MSEtrain += outputlayer.MSE;
+                    outputlayer.backprop();
+
+                } // maybe implement here also error function over all patterns
             }
+        
 
         }
 
 
-        public void setexpectation(int expected)
+        public void setexpectation(double expected)
         {
 
             inputlayer.expect = expected;
@@ -66,16 +77,28 @@ namespace FeedforwardNN
             inputlayer = new setinputlayer();   
             hiddenlayer = new Hiddenlayer(inputlayer,this); // we give inputlayer as object to the weight layer and also
                                                             // the network so it can calculate the error
-            outputlayer = new outputlayer(hiddenlayer, this); // then we give the output the weight layer as object and this FFNN
+            outputlayer = new outputlayer(hiddenlayer, this); // likewise we give the output the weight layer as object and this FFNN
                                                         
         }
 
 
-        public void active()
+        // MSEerror represents the output o_j for pattern j
+        public double MSEerror() 
         {
-            outputlayer.forwardprop();
+            return MSEtrain / training_data.Count(); //  to conclude the final error we divide by total patterns, should only be done at the end
+        }
+
+
+        /// <summary>
+        /// this function does all, from forward prop, to activate and calculate error. It is always in this 
+        /// order.
+        /// </summary>
+        public void active() 
+        {
+            outputlayer.forwardprop(); 
             outputlayer.activate();
             outputlayer.error();
+           
         }
       
     }

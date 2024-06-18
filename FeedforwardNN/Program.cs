@@ -19,13 +19,13 @@ namespace FeedforwardNN
             }
 
             foreach (var item in Mnistreader.ReadTestData())
-                {
+            {
                 test_data.Add(item);
             }
 
             FeedforwardNN network = new FeedforwardNN(trainingData, test_data);
             network.readandtrainpattern();
-
+            Console.WriteLine(  network.MSEerror().ToString());
             Console.WriteLine(network.wrong);
 
 

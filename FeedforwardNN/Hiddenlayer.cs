@@ -17,7 +17,7 @@ namespace FeedforwardNN
         public neuron[] neurons;
         public setinputlayer il; // this so we can acces the inputlayer stuff
 
-        public double[] Sigmasum = new double[10]; 
+        public double[] Sigmasum = new double[10]; // we make an array for every neuron to have their own sigmoid output
 
         public double sumerror = 0;
 
@@ -36,6 +36,7 @@ namespace FeedforwardNN
             for (int i = 0; i < nneurons; i++)
             {
                 neurons[i] = new neuron(this.il.inputs);
+                neurons[i].number = i; // it needs to know which output it represents
             }
 
         }
@@ -59,6 +60,7 @@ namespace FeedforwardNN
             }
         }
 
+
         public void activate()
         {
             int i = 0;
@@ -67,7 +69,7 @@ namespace FeedforwardNN
 
                 neuron.activation();
 
-                Sigmasum[i] = neuron.sigmsum;
+                Sigmasum[i] = neuron.sigmoidsum;
                 i++;
                  
             }
@@ -75,14 +77,13 @@ namespace FeedforwardNN
         }
 
 
-        public void backprop()
-        {
 
-        }
-
+        // so i made a bunch of if else for 0 outputs thinkning it would reproduce a NaN if it would output
+        // but it was a different bug lol
         public void error()
         {
-            double max = Sigmasum[(int)il.expect];
+            sumerror = 0; //We need to reset the sumerror from the previous pattern
+            double max = Sigmasum[(int)il.expect]; // we say this is the max 
             
             int i = 0;
             foreach (var estimate in Sigmasum)
@@ -90,23 +91,87 @@ namespace FeedforwardNN
 
                 if (i != il.expect)
                 {
-                    sumerror += 0.5 * (Math.Sqrt(estimate));
+                    if (estimate == 0)
+                    {
+                        sumerror += 0;
+                    }
+                    else
+                    {
+                        sumerror +=  0.5 * (Math.Pow( (-1 - estimate), 2 )); // desired state is -1 if we are not wanting the neuron to activate
+                    }
+                   
                 }
                 else
                 {
-                    sumerror += 0.5 * (Math.Sqrt(1 - estimate));
+                    if (estimate==0)
+                    {
+                        sumerror += 0;
+                    }
+                    else
+                    {
+                        sumerror += 0.5 * (Math.Pow(1 - estimate, 2)); // desired state is 1 if we want the neuron to activate
+                    }
+                   
                 }
                 i++;
 
-                if (max < estimate && i == ((int)il.expect))
+                if (max < estimate && i == ((int)il.expect)) // small little true true output 
                 {
                     network.wrong += 1;
-            }
+                }
             
-        }
+            }
 
 
         }
+
+
+
+        public void backpropagate()
+        {
+            // we need to make an extra weight for bias or implement that in the input weights, but that will be alot of change
+            // we then perform for every weight and bias here the derivatives and change them.
+            // We can then run activate and backprop etc again for x epochs
+
+            backpropforbias();
+            backpropforweights();
+
+        }
+
+        public void backpropforbias()
+        {
+            foreach (var neuron in this.neurons)
+            {
+            
+                neuron.bias = neuron.bias - network.learningrate * derivativeweight(neuron.number);
+                
+            }
+
+        }
+
+        public void backpropforweights()
+        {
+            foreach (var neuron in this.neurons)
+            {
+                for (int i = 0; i < neuron.weights.Length; i++)
+                {
+                    neuron.weights[i] = neuron.weights[i] - network.learningrate * derivativeweight(neuron.number) * neuron.input[i];
+                }
+            }
+
+
+        }
+
+        public double derivativeweight(double number)
+        {
+            int gk;
+            if (number == network.expect) { gk = 1; } // we need to know what number to expect
+            else        {  gk = -1;  }
+            double part1 = Sigmasum[(int)number] * (1 - Sigmasum[(int)number]); // the partial derivative of the activation function with respect to fi
+            double part2 = (Sigmasum[(int)number] - gk); // partial derivative of cost function o with respect to yk
+            return part1 * part2;
+        }
+
 
 
 
@@ -121,12 +186,12 @@ namespace FeedforwardNN
         // - It calculates every sum of error based on: TODO
         // - it calculates also the activation value which is the sigmoid function -> calculates chance 
 
-        public double error = 0;
+        public double number;
         public double sum = 0;
-        public double sigmsum = 0;
+        public double sigmoidsum = 0;
         public double expected = 0;
 
-
+        public double bias;
         public double[] input = new double[28 * 28];
         public double[] weights = new double[28*28];  // this is one neuron
         public double[] oldweights = new double[28*28];
@@ -151,6 +216,7 @@ namespace FeedforwardNN
             {
                 weights[i] = rand.NextDouble(); 
             }
+            bias = rand.NextDouble();
         }
 
 
@@ -171,29 +237,41 @@ namespace FeedforwardNN
         // we forward prop which is giving calculating for every neuron summation of w_i*x
         public void forwardprop()
         {
-            sum = 0;
+            sum = 0; // we have to reset sum here also or else it will be added from previous sum
             int i = 0;
             foreach (var item in input)
             {
-                sum += item *weights[i];
+                if (item == 0)
+                {
+                    sum += 0;
+                }
+                else
+                {
+                    sum += item * weights[i] + bias;
+                }
+              
                 i++;
             }
-
+            
         }
 
         // Hello, this is the activation with is the sigmoid function my friend
         // https://en.wikipedia.org/wiki/Sigmoid_function
         public void activation()
         {
-            sigmsum =  (1)/(1+Math.Exp(sum));
+            if (sum == 0)
+            {
+                sigmoidsum = 0;
+            }
+            else
+            {
+                sigmoidsum = (1) / (1 + Math.Exp(-sum));
+            }
+            
         }
 
      
-        public void backpropagate()
-        {
-
-
-        }
+        
 
 
 

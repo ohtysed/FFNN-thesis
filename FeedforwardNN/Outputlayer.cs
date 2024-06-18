@@ -30,6 +30,8 @@ namespace FeedforwardNN
         public void forwardprop() { this.hiddenlayer.forwardprop(); }
 
         public void activate()    { this.hiddenlayer.activate();  }
+
+        public void backprop() { this.hiddenlayer.backpropagate(); }
         
         public void error()
         {

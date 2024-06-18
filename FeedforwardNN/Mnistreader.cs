@@ -73,7 +73,7 @@ namespace FeedforwardNN
             int numberOfLabels = labels.ReadBigInt32();
 
             // lastly, read data=values for number images specified before
-            for (int i = 0; i < 1000; i++) // can specify here how many images
+            for (int i = 0; i < 500; i++) // can specify here how many images
             {
                 if (width != 28 || height != 28) continue; //make sure all images are same size or else dont read
                 var bytes = images.ReadBytes(width * height); // read 784(28*28)                 
@@ -86,6 +86,8 @@ namespace FeedforwardNN
                     height = height,
                 };
             }
+            labels.Close();
+            images.Close();
         }
 
     }
