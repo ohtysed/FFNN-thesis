@@ -30,7 +30,7 @@ namespace FeedforwardNN
             foreach (var item in Read(TrainImages, TrainLabels))
             {
                 yield return item;
-             
+
             }
         }
 
@@ -41,10 +41,9 @@ namespace FeedforwardNN
         /// <returns>Returns collection of test images</returns>
         public static IEnumerable<Image> ReadTestData()
         {
-             foreach(var item in Read(TestImages, TestLabels))
+            foreach (var item in Read(TestImages, TestLabels))
             {
                 yield return item;
-                y += 1;
             }
 
         }
@@ -98,7 +97,7 @@ namespace FeedforwardNN
 
         public int width { get; set; }
         public int height { get; set; }
-        
+
     }
 
     public static class Extensions
@@ -123,7 +122,7 @@ namespace FeedforwardNN
                 // Ensure the output directory exists
                 System.IO.Directory.CreateDirectory(outputPath);
 
-                string filePath = System.IO.Path.Combine(outputPath, "greyscale_image"+number+".png");
+                string filePath = System.IO.Path.Combine(outputPath, "greyscale_image" + number + ".png");
                 bitmap.Save(filePath);
             }
         }
@@ -136,6 +135,6 @@ namespace FeedforwardNN
             return BitConverter.ToInt32(bytes, 0);
         }
 
-  
+
     }
 }

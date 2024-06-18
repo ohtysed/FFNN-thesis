@@ -52,8 +52,6 @@ namespace FeedforwardNN
 
         }
 
-        public FeedforwardNN() { create(newinpuT); }
-
 
         public void setexpectation(int expected)
         {
