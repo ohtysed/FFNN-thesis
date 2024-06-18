@@ -86,6 +86,8 @@ namespace FeedforwardNN
                     height = height,
                 };
             }
+            labels.Close();
+            images.Close();
         }
 
     }

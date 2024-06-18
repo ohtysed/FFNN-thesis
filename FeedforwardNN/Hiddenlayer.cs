@@ -17,7 +17,7 @@ namespace FeedforwardNN
         public neuron[] neurons;
         public setinputlayer il; // this so we can acces the inputlayer stuff
 
-        public double[] Sigmasum = new double[10]; 
+        public double[] Sigmasum = new double[10]; // we make an array for every neuron to have their own sigmoid output
 
         public double sumerror = 0;
 
@@ -59,6 +59,7 @@ namespace FeedforwardNN
             }
         }
 
+
         public void activate()
         {
             int i = 0;
@@ -67,7 +68,7 @@ namespace FeedforwardNN
 
                 neuron.activation();
 
-                Sigmasum[i] = neuron.sigmsum;
+                Sigmasum[i] = neuron.sigmoidsum;
                 i++;
                  
             }
@@ -82,7 +83,7 @@ namespace FeedforwardNN
 
         public void error()
         {
-            double max = Sigmasum[(int)il.expect];
+            double max = Sigmasum[(int)il.expect]; // we say this is the max 
             
             int i = 0;
             foreach (var estimate in Sigmasum)
@@ -90,20 +91,36 @@ namespace FeedforwardNN
 
                 if (i != il.expect)
                 {
-                    sumerror += 0.5 * (Math.Sqrt(estimate));
+                    if (estimate == 0)
+                    {
+                        sumerror += 0;
+                    }
+                    else
+                    {
+                        sumerror +=  0.5 * (Math.Pow( (-1 - estimate), 2 )); // desired state is -1 if we are not wanting the neuron to activate
+                    }
+                   
                 }
                 else
                 {
-                    sumerror += 0.5 * (Math.Sqrt(1 - estimate));
+                    if (estimate==0)
+                    {
+                        sumerror += 0;
+                    }
+                    else
+                    {
+                        sumerror += 0.5 * (Math.Pow(1 - estimate, 2)); // desired state is 1 if we want the neuron to activate
+                    }
+                   
                 }
                 i++;
 
-                if (max < estimate && i == ((int)il.expect))
+                if (max < estimate && i == ((int)il.expect)) // small little true true output 
                 {
                     network.wrong += 1;
-            }
+                }
             
-        }
+            }
 
 
         }
@@ -123,7 +140,7 @@ namespace FeedforwardNN
 
         public double error = 0;
         public double sum = 0;
-        public double sigmsum = 0;
+        public double sigmoidsum = 0;
         public double expected = 0;
 
 
@@ -175,17 +192,33 @@ namespace FeedforwardNN
             int i = 0;
             foreach (var item in input)
             {
-                sum += item *weights[i];
+                if (item == 0)
+                {
+                    sum += 0;
+                }
+                else
+                {
+                    sum += item * weights[i];
+                }
+              
                 i++;
             }
-
+            
         }
 
         // Hello, this is the activation with is the sigmoid function my friend
         // https://en.wikipedia.org/wiki/Sigmoid_function
         public void activation()
         {
-            sigmsum =  (1)/(1+Math.Exp(sum));
+            if (sum == 0)
+            {
+                sigmoidsum = 0;
+            }
+            else
+            {
+                sigmoidsum = (1) / (1 + Math.Exp(-sum));
+            }
+            
         }
 
      

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace FeedforwardNN
 {
@@ -16,9 +17,10 @@ namespace FeedforwardNN
         public Hiddenlayer hiddenlayer;
 
         public double learningrate = 0.01;
-        public double MSEtrain = 0; // for all patterns tot average
+        public double MSEtrain = 0;
+         
         public int wrong = 0;
-        public int expect;
+        public double expect = 0.0;
 
         public Collection<Image> training_data;
         public Collection<Image> test_data;
@@ -34,6 +36,7 @@ namespace FeedforwardNN
             training_data = Train_data;
             test_data = Test_data;
             create();
+
             
         }
 
@@ -53,7 +56,7 @@ namespace FeedforwardNN
         }
 
 
-        public void setexpectation(int expected)
+        public void setexpectation(double expected)
         {
 
             inputlayer.expect = expected;
@@ -66,10 +69,16 @@ namespace FeedforwardNN
             inputlayer = new setinputlayer();   
             hiddenlayer = new Hiddenlayer(inputlayer,this); // we give inputlayer as object to the weight layer and also
                                                             // the network so it can calculate the error
-            outputlayer = new outputlayer(hiddenlayer, this); // then we give the output the weight layer as object and this FFNN
+            outputlayer = new outputlayer(hiddenlayer, this); // likewise we give the output the weight layer as object and this FFNN
                                                         
         }
 
+
+
+        public double MSEerror() 
+        {
+            return MSEtrain / training_data.Count(); //  to conclude the final error we divide by total patterns, should only be done at the end
+        }
 
         public void active()
         {
