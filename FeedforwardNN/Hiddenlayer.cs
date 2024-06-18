@@ -39,14 +39,14 @@ namespace FeedforwardNN
             }
 
         }
-        
+         
         public void setNeuron()
         {
             int nneurons = 10;
             for (int i = 0; i < nneurons; i++)
             {
                 neurons[i].setneuron(this.il.inputs);
-            }
+        }
 
         }
         
@@ -86,7 +86,7 @@ namespace FeedforwardNN
             
             int i = 0;
             foreach (var estimate in Sigmasum)
-            {   
+            {
 
                 if (i != il.expect)
                 {
@@ -101,10 +101,10 @@ namespace FeedforwardNN
                 if (max < estimate && i == ((int)il.expect))
                 {
                     network.wrong += 1;
-                }
-             
             }
-        
+            
+        }
+
 
         }
 
@@ -139,7 +139,7 @@ namespace FeedforwardNN
         public void setneuron(double[] h)
         {
             input = h;  
-            
+
         }
 
         // Xavier initiliazation // todo: change initiliazation of weights https://arxiv.org/pdf/2004.06632

@@ -42,9 +42,10 @@ namespace FeedforwardNN
         public static IEnumerable<Image> ReadTestData()
         {
              foreach(var item in Read(TestImages, TestLabels))
-             {
+            {
                 yield return item;
-             }
+                y += 1;
+            }
 
         }
 

@@ -19,13 +19,13 @@ namespace FeedforwardNN
             
 
             public void inputlayer(byte[] Input)
-            {
+                {
               inputs = new double[Input.Length];
                 for (int i = 0; i < Input.Length; i++)
-                {
+                    {
                     inputs[i] = ((double)Input[i])/255;
+                    }
                 }
-            }
 
           
 

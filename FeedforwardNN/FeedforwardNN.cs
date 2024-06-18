@@ -49,9 +49,10 @@ namespace FeedforwardNN
                 MSEtrain += outputlayer.MSE;
 
             }
-        
+
         }
 
+        public FeedforwardNN() { create(newinpuT); }
 
 
         public void setexpectation(int expected)

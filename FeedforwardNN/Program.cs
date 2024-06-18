@@ -19,7 +19,7 @@ namespace FeedforwardNN
             }
 
             foreach (var item in Mnistreader.ReadTestData())
-            {
+                {
                 test_data.Add(item);
             }
 
