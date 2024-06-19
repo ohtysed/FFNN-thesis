@@ -16,7 +16,7 @@ namespace FeedforwardNN
         public outputlayer outputlayer; 
         public Hiddenlayer hiddenlayer;
 
-        public double learningrate = 0.01;
+        public double learningrate = 1;
         public double MSEtrain = 0;
          
         public int wrong = 0;
@@ -58,6 +58,7 @@ namespace FeedforwardNN
                     outputlayer.backprop();
 
                 } // maybe implement here also error function over all patterns
+                Console.WriteLine(wrong);
             }
         
 
@@ -82,7 +83,7 @@ namespace FeedforwardNN
         }
 
 
-        // MSEerror represents the output o_j for pattern j
+        // MSEerror represents the error for the average of all patterns
         public double MSEerror() 
         {
             return MSEtrain / training_data.Count(); //  to conclude the final error we divide by total patterns, should only be done at the end

@@ -142,9 +142,11 @@ namespace FeedforwardNN
         {
             foreach (var neuron in this.neurons)
             {
-            
+                Console.WriteLine(neuron.bias+ " before bias");
                 neuron.bias = neuron.bias - network.learningrate * derivativeweight(neuron.number);
-                
+                Console.WriteLine(network.learningrate * derivativeweight(neuron.number) + " the supposed change");
+                Console.WriteLine(neuron.bias + " after bias");
+
             }
 
         }
@@ -155,7 +157,10 @@ namespace FeedforwardNN
             {
                 for (int i = 0; i < neuron.weights.Length; i++)
                 {
+                    Console.WriteLine(neuron.weights[i] + " before weight");
                     neuron.weights[i] = neuron.weights[i] - network.learningrate * derivativeweight(neuron.number) * neuron.input[i];
+                    Console.WriteLine(network.learningrate * derivativeweight(neuron.number) * neuron.input[i] + " the supposed change");
+                    Console.WriteLine(neuron.weights[i] + " after weight");
                 }
             }
 
@@ -194,7 +199,7 @@ namespace FeedforwardNN
         public double bias;
         public double[] input = new double[28 * 28];
         public double[] weights = new double[28*28];  // this is one neuron
-        public double[] oldweights = new double[28*28];
+
         public neuron (double[] h)
         { 
             initializeweights();
