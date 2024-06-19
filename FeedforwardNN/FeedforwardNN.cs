@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.Common;
 using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
@@ -21,6 +22,7 @@ namespace FeedforwardNN
          
         public int wrong = 0;
         public double expect = 0.0;
+        public double Experiment;
 
         public Collection<Image> training_data;
         public Collection<Image> test_data;
@@ -56,9 +58,12 @@ namespace FeedforwardNN
                     active();
                     MSEtrain += outputlayer.MSE;
                     outputlayer.backprop();
+                    Experiment += inputlayer.experiment; 
 
                 } // maybe implement here also error function over all patterns
+                Experiment /= training_data.Count();
                 Console.WriteLine(wrong + " amount wrong in training in epoch " + i);
+               // Console.WriteLine(Experiment+ " this is average pixels");
             }
         
 
@@ -68,7 +73,7 @@ namespace FeedforwardNN
         {
             wrong = 0;  // reset all
             MSEtrain = 0; // errors 
-            foreach (var item in test_data) // the training set was repeated 30 times and not the patterns themselves
+            foreach (var item in test_data) 
             {
               
 

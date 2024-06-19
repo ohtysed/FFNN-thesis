@@ -16,16 +16,20 @@ namespace FeedforwardNN
      
             public double expect;
             public double[] inputs;
+        public double experiment;
             
 
             public void inputlayer(byte[] Input)
             {
                 inputs = new double[Input.Length];
-                for (int i = 0; i < Input.Length; i++)
-                {
-                    inputs[i] = linearmapping(Input[i]);
+            for (int i = 0; i < Input.Length; i++)
+            {
+                inputs[i] = linearmapping(Input[i]);
+                experiment += Input[i];
                 }
-            }
+            experiment = experiment / Input.Length;
+            
+        }
 
         // https://www.math.uh.edu/~jiwenhe/math4377/lectures/sec2_2.pdf
             public double linearmapping(byte Input) 

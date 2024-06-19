@@ -14,7 +14,7 @@ namespace FeedforwardNN
     {
         //This class reads the dataset, it also has some extensions such as viewimage, which displays an image on png file in the map 'images'
 
-        //paths are relative, make sure path is configured to \net6.0 as base resp
+        //paths are relative
         private const string TrainImages = "mnist/train-images.idx3-ubyte";
         private const string TrainLabels = "mnist/train-labels.idx1-ubyte";
         private const string TestImages = "mnist/t10k-images.idx3-ubyte";

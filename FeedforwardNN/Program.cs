@@ -26,10 +26,10 @@ namespace FeedforwardNN
             FeedforwardNN network = new FeedforwardNN(trainingData, test_data);
             network.readandtrainpattern();
          
-            Console.WriteLine(  network.MSEerror().ToString());
+            Console.WriteLine(  network.MSEerror().ToString()+ " this is error of train");
 
             network.readandtestpattern();
-            Console.WriteLine(network.MSEerror().ToString());
+            Console.WriteLine(network.MSEerror().ToString()+ " this is error of test");
 
 
         }
