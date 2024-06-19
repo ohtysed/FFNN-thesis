@@ -90,10 +90,6 @@ namespace FeedforwardNN
 
 
 
-        public double MSEerror() 
-        {
-            return MSEtrain / training_data.Count(); //  to conclude the final error we divide by total patterns, should only be done at the end
-        }
 
         /// <summary>
         /// this function does all, from forward prop, to activate and calculate error. It is always in this 
