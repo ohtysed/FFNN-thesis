@@ -16,7 +16,7 @@ namespace FeedforwardNN
         public outputlayer outputlayer; 
         public Hiddenlayer hiddenlayer;
 
-        public double learningrate = 0.01;
+        public double learningrate = 0.4;
         public double MSEtrain = 0;
          
         public int wrong = 0;
@@ -58,8 +58,29 @@ namespace FeedforwardNN
                     outputlayer.backprop();
 
                 } // maybe implement here also error function over all patterns
+                Console.WriteLine(wrong + " amount wrong in training in epoch " + i);
             }
         
+
+        }
+
+        public void readandtestpattern()
+        {
+            wrong = 0;  // reset all
+            MSEtrain = 0; // errors 
+            foreach (var item in test_data) // the training set was repeated 30 times and not the patterns themselves
+            {
+              
+
+                inputlayer.inputlayer(item.Data);
+                hiddenlayer.setNeuron();
+                setexpectation(item.Label);
+                active();
+                MSEtrain += outputlayer.MSE;
+                //outputlayer.backprop();
+
+            } 
+            Console.WriteLine(wrong + " amount wrong in test");
 
         }
 
@@ -82,7 +103,7 @@ namespace FeedforwardNN
         }
 
 
-        // MSEerror represents the output o_j for pattern j
+        // MSEerror represents the error for the average of all patterns
         public double MSEerror() 
         {
             return MSEtrain / training_data.Count(); //  to conclude the final error we divide by total patterns, should only be done at the end
