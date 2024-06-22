@@ -9,6 +9,7 @@ using System.Drawing.Imaging;
 
 namespace FeedforwardNN
 {
+    // citation:
     // https://stackoverflow.com/questions/49407772/reading-mnist-database 
     class Mnistreader
     {
@@ -27,7 +28,8 @@ namespace FeedforwardNN
         public static IEnumerable<Image> ReadTrainingData()
         {
 
-            foreach (var item in Read(TrainImages, TrainLabels))
+            int images = 1000;
+            foreach (var item in Read(TrainImages, TrainLabels, images))
             {
                 yield return item;
 
@@ -41,7 +43,8 @@ namespace FeedforwardNN
         /// <returns>Returns collection of test images</returns>
         public static IEnumerable<Image> ReadTestData()
         {
-            foreach (var item in Read(TestImages, TestLabels))
+            int images = 100;
+            foreach (var item in Read(TestImages, TestLabels, images))
             {
                 yield return item;
             }
@@ -56,12 +59,12 @@ namespace FeedforwardNN
         /// Reading from the labels bytefile, the first 2 bytes represent:
         /// 1. magic label 2. number of labels
         /// </summary>
-        private static IEnumerable<Image> Read(string imagesPath, string labelsPath)
+        private static IEnumerable<Image> Read(string imagesPath, string labelsPath, int imagenum)
         {
             // read the labels and images with opening filestream and inputting the output in binaryreader
             BinaryReader labels = new BinaryReader(new FileStream(labelsPath, FileMode.Open));
             BinaryReader images = new BinaryReader(new FileStream(imagesPath, FileMode.Open));
-
+            
 
             // read in this sequence to receive information about the following:
             int magicNumber = images.ReadBigInt32(); // if random needed
@@ -73,7 +76,7 @@ namespace FeedforwardNN
             int numberOfLabels = labels.ReadBigInt32();
 
             // lastly, read data=values for number images specified before
-            for (int i = 0; i < 1000; i++) // can specify here how many images
+            for (int i = 0; i < imagenum; i++) // can specify here how many images
             {
                 if (width != 28 || height != 28) continue; //make sure all images are same size or else dont read
                 var bytes = images.ReadBytes(width * height); // read 784(28*28)                 
@@ -86,6 +89,7 @@ namespace FeedforwardNN
                     height = height,
                 };
             }
+            // idk if this was needed, i did this because of a bug but it turned out it wasnt this but im still keeping it
             labels.Close();
             images.Close();
         }

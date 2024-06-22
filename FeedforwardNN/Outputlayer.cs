@@ -16,8 +16,6 @@ namespace FeedforwardNN
         public double MSE; // we want to give the MSE of this whole pattern
 
 
-        public int nNeurons = 10;
-
         public outputlayer(Hiddenlayer Hiddenlayer, FeedforwardNN Network)
         {
         
@@ -27,6 +25,7 @@ namespace FeedforwardNN
         
         } 
 
+        public void setNeuron() { this.hiddenlayer.setNeuron(); }
         public void forwardprop() { this.hiddenlayer.forwardprop(); }
 
         public void activate()    { this.hiddenlayer.activate();  }

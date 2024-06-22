@@ -83,11 +83,14 @@ namespace FeedforwardNN
         public void error()
         {
             sumerror = 0; //We need to reset the sumerror from the previous pattern
-            double max = Sigmasum[(int)il.expect]; // we say this is the max 
-            
+            double max = -1; // we say this is the max
+            double output = -1; // this is the output we expect to be the biggest
+
             int i = 0;
+       
             foreach (var estimate in Sigmasum)
             {
+      
 
                 if (i != il.expect)
                 {
@@ -99,10 +102,13 @@ namespace FeedforwardNN
                     {
                         sumerror +=  0.5 * (Math.Pow( (-1 - estimate), 2 )); // desired state is -1 if we are not wanting the neuron to activate
                     }
+
+                    if(estimate > max) { max = estimate; } // with this we search for the biggest activated output neuron excluding the neuron we expect
                    
                 }
                 else
-                {
+                {   
+                    output = estimate; // we save the output neuron which we expect, so we compare it with the biggest
                     if (estimate==0)
                     {
                         sumerror += 0;
@@ -111,15 +117,15 @@ namespace FeedforwardNN
                     {
                         sumerror += 0.5 * (Math.Pow(1 - estimate, 2)); // desired state is 1 if we want the neuron to activate
                     }
-                   
-                }
-                i++;
 
-                if (max < estimate && i == ((int)il.expect)) // small little true true output 
-                {
-                    network.wrong += 1;
                 }
+           
+                i++;
             
+            }
+            if (output < max) // small little true true output, namely, if the neuron we found which is excluding the neuron we expect, is bigger then the actual neuron output we want, we have a wrong output
+            {
+                network.wrong += 1;
             }
 
 
@@ -142,9 +148,9 @@ namespace FeedforwardNN
         {
             foreach (var neuron in this.neurons)
             {
-               // Console.WriteLine(neuron.bias+ " before bias");
+     //           Console.WriteLine(neuron.bias+ " before bias");
                 neuron.bias = neuron.bias - network.learningrate * derivativeweight(neuron.number);
-               // Console.WriteLine(network.learningrate * derivativeweight(neuron.number) + " the supposed change");
+              //  Console.WriteLine(network.learningrate * derivativeweight(neuron.number) + " the supposed change");
                // Console.WriteLine(neuron.bias + " after bias");
 
             }
@@ -153,14 +159,20 @@ namespace FeedforwardNN
 
         public void backpropforweights()
         {
+            double derivativeweights = 0;
+            double neuroninput = 0;
             foreach (var neuron in this.neurons)
             {
                 for (int i = 0; i < neuron.weights.Length; i++)
                 {
-                   // Console.WriteLine(neuron.weights[i] + " before weight");
+                  //  Console.WriteLine(neuron.weights[i] + " before weight");
                     neuron.weights[i] = neuron.weights[i] - network.learningrate * derivativeweight(neuron.number) * neuron.input[i];
-                   // Console.WriteLine(network.learningrate * derivativeweight(neuron.number) * neuron.input[i] + " the supposed change");
-                   // Console.WriteLine(neuron.weights[i] + " after weight");
+                    derivativeweights = derivativeweight(neuron.number);
+                    neuroninput = neuron.input[i];
+
+               //   Console.WriteLine(network.learningrate * derivativeweight(neuron.number) * neuron.input[i] + " the supposed change");
+                  //  Console.WriteLine(derivativeweight(neuron.number) + " this is the derivateweight");
+                  //  Console.WriteLine(neuron.weights[i] + " after weight");
                 }
             }
 
@@ -172,8 +184,8 @@ namespace FeedforwardNN
             int gk;
             if (number == network.expect) { gk = 1; } // we need to know what number to expect
             else        {  gk = -1;  }
-            double part1 = Sigmasum[(int)number] * (1 - Sigmasum[(int)number]); // the partial derivative of the activation function with respect to fi
-            double part2 = (Sigmasum[(int)number] - gk); // partial derivative of cost function o with respect to yk
+            double part1 = Sigmasum[(int)number] * (1 - Sigmasum[(int)number]); // the partial derivative of the activation function with respect to fi 
+            double part2 = (Sigmasum[(int)number] - gk); // partial derivative of cost function o with respect to yk but gk is what we expect
             return part1 * part2;
         }
 
@@ -219,9 +231,20 @@ namespace FeedforwardNN
             double variance = Math.Sqrt(6/(11)); // Limit idk actually change when all works lol todo
             for (int i = 0; i < weights.Length; i++)
             {
-                weights[i] = rand.NextDouble(); 
+                weights[i] = linearmapping(rand.NextDouble()); 
             }
-            bias = rand.NextDouble();
+            bias = linearmapping(rand.NextDouble());
+        }
+
+        public double linearmapping(double Input)
+        {
+            //citation:
+            // https://stackoverflow.com/questions/57823085/my-linear-map-function-is-not-giving-right-answers
+            var newSize = 0.1 - (-0.1); // outter- inner
+            var oldSize = 1 - 0;
+            var oldScale = (double)Input - 0;
+            return (newSize * oldScale / oldSize) + (-.1); // + inner
+
         }
 
 
@@ -252,11 +275,12 @@ namespace FeedforwardNN
                 }
                 else
                 {
-                    sum += item * weights[i] + bias;
+                    sum += item * weights[i];
                 }
               
                 i++;
             }
+            sum += bias;
             
         }
 

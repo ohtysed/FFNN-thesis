@@ -17,12 +17,15 @@ namespace FeedforwardNN
         public outputlayer outputlayer; 
         public Hiddenlayer hiddenlayer;
 
-        public double learningrate = 0.4;
+        public double learningrate = 0.01;
         public double MSEtrain = 0;
+        public double epochs = 10000;
          
         public int wrong = 0;
+        public int previouswrong = 0;
+        public int alsowrong = 0;
         public double expect = 0.0;
-        public double Experiment;
+        public double Experiment; // calculates average of pixels in a set
 
         public Collection<Image> training_data;
         public Collection<Image> test_data;
@@ -47,13 +50,14 @@ namespace FeedforwardNN
         //
         public void readandtrainpattern() 
         {
-            for (int i = 0;  i < 30; i++)
+            for (int i = 0;  i < epochs; i++)
             {
+                wrong = 0;
                 foreach (var item in training_data) // the training set was repeated 30 times and not the patterns themselves
                 {
 
                     inputlayer.inputlayer(item.Data);
-                    hiddenlayer.setNeuron();
+                    outputlayer.setNeuron();
                     setexpectation(item.Label);
                     active();
                     MSEtrain += outputlayer.MSE;
@@ -62,8 +66,11 @@ namespace FeedforwardNN
 
                 } // maybe implement here also error function over all patterns
                 Experiment /= training_data.Count();
-                Console.WriteLine(wrong + " amount wrong in training in epoch " + i);
-               // Console.WriteLine(Experiment+ " this is average pixels");
+                Console.WriteLine((wrong - previouswrong) + " wrong on epoch" + i);
+                previouswrong = wrong;
+
+                // Console.WriteLine(Experiment+ " this is average pixels");
+                //Console.WriteLine(alsowrong + " if output was 1 how many others are also 1");
             }
         
 
@@ -78,7 +85,7 @@ namespace FeedforwardNN
               
 
                 inputlayer.inputlayer(item.Data);
-                hiddenlayer.setNeuron();
+                outputlayer.setNeuron();
                 setexpectation(item.Label);
                 active();
                 MSEtrain += outputlayer.MSE;
@@ -111,7 +118,7 @@ namespace FeedforwardNN
         // MSEerror represents the error for the average of all patterns
         public double MSEerror() 
         {
-            return MSEtrain / training_data.Count(); //  to conclude the final error we divide by total patterns, should only be done at the end
+            return MSEtrain / training_data.Count() / epochs; //  to conclude the final error we divide by total patterns, should only be done at the end
         }
 
 

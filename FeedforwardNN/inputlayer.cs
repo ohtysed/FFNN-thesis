@@ -31,14 +31,16 @@ namespace FeedforwardNN
             
         }
 
+        // citation:
         // https://www.math.uh.edu/~jiwenhe/math4377/lectures/sec2_2.pdf
             public double linearmapping(byte Input) 
             {
+       //citation:
        // https://stackoverflow.com/questions/57823085/my-linear-map-function-is-not-giving-right-answers
-            var newSize = 1 - (-1);
+            var newSize = 1 - (-1); // outter- inner
             var oldSize = 255 - 0;
             var oldScale = (double)Input - 0;
-            return (newSize * oldScale / oldSize) + (-1);
+            return (newSize * oldScale / oldSize) + (-1); // + inner
         
             }
 
