@@ -181,6 +181,7 @@ namespace FeedforwardNN
             foreach (var neuron in this.neurons)
             {
      //           Console.WriteLine(neuron.bias+ " before bias");
+                
                 neuron.bias = neuron.bias - network.learningrate * derivativeweight(neuron.number);
               //  Console.WriteLine(network.learningrate * derivativeweight(neuron.number) + " the supposed change");
                // Console.WriteLine(neuron.bias + " after bias");
@@ -196,12 +197,20 @@ namespace FeedforwardNN
             {
                 for (int i = 0; i < neuron.weights.Length; i++)
                 {
-                  //  Console.WriteLine(neuron.weights[i] + " before weight");
-                    neuron.weights[i] = neuron.weights[i] - network.learningrate * derivativeweight(neuron.number) * neuron.input[i];
+                    //  Console.WriteLine(neuron.weights[i] + " before weight");
+                    // so the weight changes stay within the sigmoid function
+                    if ((neuron.weights[i] - network.learningrate * derivativeweight(neuron.number) * neuron.input[i]) < 4 && (neuron.weights[i] - network.learningrate * derivativeweight(neuron.number) * neuron.input[i]) > -4)
+                    {
+                        neuron.weights[i] = neuron.weights[i] - network.learningrate * derivativeweight(neuron.number) * neuron.input[i];
+                    } // if the weight becomes less or more than -4 and 4 respect
+                    else if ((neuron.weights[i] - network.learningrate * derivativeweight(neuron.number) * neuron.input[i]) > 4) // if the weight becomes more than 4, then become 4 or else -4
+                    { neuron.weights[i] = 4; }
+                    else { neuron.weights[i] = -4; };
+                   
                   
         
 
-               //   Console.WriteLine(network.learningrate * derivativeweight(neuron.number) * neuron.input[i] + " the supposed change");
+                //  Console.WriteLine(network.learningrate * derivativeweight(neuron.number) * neuron.input[i] + " the supposed change");
                   //  Console.WriteLine(derivativeweight(neuron.number) + " this is the derivateweight");
                   //  Console.WriteLine(neuron.weights[i] + " after weight");
                 }
@@ -271,10 +280,10 @@ namespace FeedforwardNN
         {
             //citation:
             // https://stackoverflow.com/questions/57823085/my-linear-map-function-is-not-giving-right-answers
-            var newSize = 0.1 - (-0.1); // outter- inner
+            var newSize = (2.4/weights.Length) - (-2.4/weights.Length); // outter- inner
             var oldSize = 1 - 0;
             var oldScale = (double)Input - 0;
-            return (newSize * oldScale / oldSize) + (-.1); // + inner
+            return (newSize * oldScale / oldSize) + (-2.4 / weights.Length); // + inner
 
         }
 
