@@ -1,0 +1,901 @@
+2167 wrong on epoch0 of training set
+5,006892105444364 this is average MSE of training set
+229 amount wrong in test
+2494 wrong on epoch1 of training set
+5,0036415665852605 this is average MSE of training set
+261 amount wrong in test
+2664 wrong on epoch2 of training set
+5,002489626933175 this is average MSE of training set
+272 amount wrong in test
+2710 wrong on epoch3 of training set
+5,00188170449661 this is average MSE of training set
+276 amount wrong in test
+2715 wrong on epoch4 of training set
+4,999573400180131 this is average MSE of training set
+276 amount wrong in test
+2619 wrong on epoch5 of training set
+4,993197370058382 this is average MSE of training set
+264 amount wrong in test
+2430 wrong on epoch6 of training set
+4,988315802189466 this is average MSE of training set
+240 amount wrong in test
+2322 wrong on epoch7 of training set
+4,984499809571018 this is average MSE of training set
+214 amount wrong in test
+2244 wrong on epoch8 of training set
+4,981459306114925 this is average MSE of training set
+204 amount wrong in test
+2184 wrong on epoch9 of training set
+4,978999415068012 this is average MSE of training set
+197 amount wrong in test
+2145 wrong on epoch10 of training set
+4,976969112963774 this is average MSE of training set
+196 amount wrong in test
+2113 wrong on epoch11 of training set
+4,975263304002249 this is average MSE of training set
+194 amount wrong in test
+2082 wrong on epoch12 of training set
+4,973809376082063 this is average MSE of training set
+191 amount wrong in test
+2047 wrong on epoch13 of training set
+4,972554540918143 this is average MSE of training set
+189 amount wrong in test
+2031 wrong on epoch14 of training set
+4,971459121401029 this is average MSE of training set
+187 amount wrong in test
+2004 wrong on epoch15 of training set
+4,970493400510751 this is average MSE of training set
+185 amount wrong in test
+1981 wrong on epoch16 of training set
+4,969635073215925 this is average MSE of training set
+183 amount wrong in test
+1965 wrong on epoch17 of training set
+4,968866891422192 this is average MSE of training set
+182 amount wrong in test
+1943 wrong on epoch18 of training set
+4,9681752303512035 this is average MSE of training set
+180 amount wrong in test
+1932 wrong on epoch19 of training set
+4,967549177352048 this is average MSE of training set
+177 amount wrong in test
+1923 wrong on epoch20 of training set
+4,966979752148202 this is average MSE of training set
+177 amount wrong in test
+1909 wrong on epoch21 of training set
+4,966459384376847 this is average MSE of training set
+177 amount wrong in test
+1903 wrong on epoch22 of training set
+4,965981678902663 this is average MSE of training set
+177 amount wrong in test
+1895 wrong on epoch23 of training set
+4,965541303234658 this is average MSE of training set
+176 amount wrong in test
+1882 wrong on epoch24 of training set
+4,965133863994332 this is average MSE of training set
+176 amount wrong in test
+1873 wrong on epoch25 of training set
+4,964755722423407 this is average MSE of training set
+175 amount wrong in test
+1867 wrong on epoch26 of training set
+4,964403787967877 this is average MSE of training set
+173 amount wrong in test
+1865 wrong on epoch27 of training set
+4,9640753613879385 this is average MSE of training set
+172 amount wrong in test
+1863 wrong on epoch28 of training set
+4,96376804624672 this is average MSE of training set
+172 amount wrong in test
+1860 wrong on epoch29 of training set
+4,963479701915521 this is average MSE of training set
+172 amount wrong in test
+1855 wrong on epoch30 of training set
+4,9632084113548185 this is average MSE of training set
+174 amount wrong in test
+1853 wrong on epoch31 of training set
+4,9629524522636785 this is average MSE of training set
+174 amount wrong in test
+1853 wrong on epoch32 of training set
+4,9627102700652514 this is average MSE of training set
+176 amount wrong in test
+1851 wrong on epoch33 of training set
+4,962480455050379 this is average MSE of training set
+177 amount wrong in test
+1850 wrong on epoch34 of training set
+4,962261727482221 this is average MSE of training set
+177 amount wrong in test
+1854 wrong on epoch35 of training set
+4,96205293504164 this is average MSE of training set
+177 amount wrong in test
+1858 wrong on epoch36 of training set
+4,961853065266012 this is average MSE of training set
+177 amount wrong in test
+1867 wrong on epoch37 of training set
+4,961661268336092 this is average MSE of training set
+177 amount wrong in test
+1867 wrong on epoch38 of training set
+4,961476873758993 this is average MSE of training set
+179 amount wrong in test
+1880 wrong on epoch39 of training set
+4,9612993801099545 this is average MSE of training set
+179 amount wrong in test
+1884 wrong on epoch40 of training set
+4,961128406001965 this is average MSE of training set
+183 amount wrong in test
+1882 wrong on epoch41 of training set
+4,96096360705734 this is average MSE of training set
+182 amount wrong in test
+1885 wrong on epoch42 of training set
+4,960804602695666 this is average MSE of training set
+184 amount wrong in test
+1885 wrong on epoch43 of training set
+4,960650982275939 this is average MSE of training set
+185 amount wrong in test
+1890 wrong on epoch44 of training set
+4,960502402583845 this is average MSE of training set
+186 amount wrong in test
+1889 wrong on epoch45 of training set
+4,9603586887467275 this is average MSE of training set
+187 amount wrong in test
+1895 wrong on epoch46 of training set
+4,960219815765869 this is average MSE of training set
+186 amount wrong in test
+1894 wrong on epoch47 of training set
+4,960085784874073 this is average MSE of training set
+185 amount wrong in test
+1900 wrong on epoch48 of training set
+4,959956534795201 this is average MSE of training set
+185 amount wrong in test
+1899 wrong on epoch49 of training set
+4,9598319348818425 this is average MSE of training set
+185 amount wrong in test
+1896 wrong on epoch50 of training set
+4,959711810036788 this is average MSE of training set
+185 amount wrong in test
+1900 wrong on epoch51 of training set
+4,959595961974227 this is average MSE of training set
+183 amount wrong in test
+1897 wrong on epoch52 of training set
+4,959484182346615 this is average MSE of training set
+183 amount wrong in test
+1894 wrong on epoch53 of training set
+4,9593762609147225 this is average MSE of training set
+183 amount wrong in test
+1896 wrong on epoch54 of training set
+4,959271990703817 this is average MSE of training set
+183 amount wrong in test
+1898 wrong on epoch55 of training set
+4,959171171120658 this is average MSE of training set
+182 amount wrong in test
+1898 wrong on epoch56 of training set
+4,959073609872457 this is average MSE of training set
+182 amount wrong in test
+1897 wrong on epoch57 of training set
+4,958979124487384 this is average MSE of training set
+182 amount wrong in test
+1902 wrong on epoch58 of training set
+4,9588875440391345 this is average MSE of training set
+182 amount wrong in test
+1901 wrong on epoch59 of training set
+4,9587987112836736 this is average MSE of training set
+183 amount wrong in test
+1898 wrong on epoch60 of training set
+4,958712484783346 this is average MSE of training set
+181 amount wrong in test
+1899 wrong on epoch61 of training set
+4,958628739879548 this is average MSE of training set
+180 amount wrong in test
+1896 wrong on epoch62 of training set
+4,958547367179952 this is average MSE of training set
+180 amount wrong in test
+1894 wrong on epoch63 of training set
+4,9584682682304475 this is average MSE of training set
+179 amount wrong in test
+1895 wrong on epoch64 of training set
+4,958391349837877 this is average MSE of training set
+179 amount wrong in test
+1892 wrong on epoch65 of training set
+4,958316519386297 this is average MSE of training set
+179 amount wrong in test
+1892 wrong on epoch66 of training set
+4,958243682545984 this is average MSE of training set
+178 amount wrong in test
+1887 wrong on epoch67 of training set
+4,958172743241595 this is average MSE of training set
+179 amount wrong in test
+1889 wrong on epoch68 of training set
+4,9581036050940925 this is average MSE of training set
+179 amount wrong in test
+1884 wrong on epoch69 of training set
+4,958036173805083 this is average MSE of training set
+179 amount wrong in test
+1882 wrong on epoch70 of training set
+4,95797036035324 this is average MSE of training set
+179 amount wrong in test
+1880 wrong on epoch71 of training set
+4,957906084856867 this is average MSE of training set
+179 amount wrong in test
+1881 wrong on epoch72 of training set
+4,957843280350529 this is average MSE of training set
+177 amount wrong in test
+1880 wrong on epoch73 of training set
+4,957781894857236 this is average MSE of training set
+177 amount wrong in test
+1880 wrong on epoch74 of training set
+4,957721890038066 this is average MSE of training set
+178 amount wrong in test
+1875 wrong on epoch75 of training set
+4,957663236284223 this is average MSE of training set
+178 amount wrong in test
+1872 wrong on epoch76 of training set
+4,957605906420719 this is average MSE of training set
+178 amount wrong in test
+1870 wrong on epoch77 of training set
+4,957549870821144 this is average MSE of training set
+178 amount wrong in test
+1868 wrong on epoch78 of training set
+4,957495095185914 this is average MSE of training set
+178 amount wrong in test
+1867 wrong on epoch79 of training set
+4,95744154047621 this is average MSE of training set
+178 amount wrong in test
+1865 wrong on epoch80 of training set
+4,957389163921449 this is average MSE of training set
+179 amount wrong in test
+1862 wrong on epoch81 of training set
+4,957337920319162 this is average MSE of training set
+179 amount wrong in test
+1858 wrong on epoch82 of training set
+4,957287763303622 this is average MSE of training set
+180 amount wrong in test
+1857 wrong on epoch83 of training set
+4,957238646568796 this is average MSE of training set
+180 amount wrong in test
+1858 wrong on epoch84 of training set
+4,957190525192758 this is average MSE of training set
+180 amount wrong in test
+1855 wrong on epoch85 of training set
+4,957143357261291 this is average MSE of training set
+180 amount wrong in test
+1854 wrong on epoch86 of training set
+4,957097105894262 this is average MSE of training set
+179 amount wrong in test
+1851 wrong on epoch87 of training set
+4,957051741445689 this is average MSE of training set
+178 amount wrong in test
+1848 wrong on epoch88 of training set
+4,957007243086727 this is average MSE of training set
+179 amount wrong in test
+1846 wrong on epoch89 of training set
+4,956963598604843 this is average MSE of training set
+178 amount wrong in test
+1847 wrong on epoch90 of training set
+4,9569208018157775 this is average MSE of training set
+178 amount wrong in test
+1845 wrong on epoch91 of training set
+4,956878848509384 this is average MSE of training set
+177 amount wrong in test
+1842 wrong on epoch92 of training set
+4,956837732880362 this is average MSE of training set
+177 amount wrong in test
+1842 wrong on epoch93 of training set
+4,956797445739997 this is average MSE of training set
+177 amount wrong in test
+1842 wrong on epoch94 of training set
+4,956757974388766 this is average MSE of training set
+177 amount wrong in test
+1840 wrong on epoch95 of training set
+4,95671930333112 this is average MSE of training set
+176 amount wrong in test
+1839 wrong on epoch96 of training set
+4,95668141516119 this is average MSE of training set
+175 amount wrong in test
+1834 wrong on epoch97 of training set
+4,956644291318372 this is average MSE of training set
+175 amount wrong in test
+1832 wrong on epoch98 of training set
+4,956607912648279 this is average MSE of training set
+176 amount wrong in test
+1829 wrong on epoch99 of training set
+4,956572259794487 this is average MSE of training set
+176 amount wrong in test
+1826 wrong on epoch100 of training set
+4,956537313464646 this is average MSE of training set
+176 amount wrong in test
+1826 wrong on epoch101 of training set
+4,956503054608063 this is average MSE of training set
+176 amount wrong in test
+1825 wrong on epoch102 of training set
+4,956469464531982 this is average MSE of training set
+176 amount wrong in test
+1824 wrong on epoch103 of training set
+4,95643652497626 this is average MSE of training set
+176 amount wrong in test
+1823 wrong on epoch104 of training set
+4,95640421815904 this is average MSE of training set
+176 amount wrong in test
+1822 wrong on epoch105 of training set
+4,956372526802658 this is average MSE of training set
+175 amount wrong in test
+1822 wrong on epoch106 of training set
+4,956341434145656 this is average MSE of training set
+175 amount wrong in test
+1817 wrong on epoch107 of training set
+4,956310923945746 this is average MSE of training set
+175 amount wrong in test
+1811 wrong on epoch108 of training set
+4,956280980476069 this is average MSE of training set
+174 amount wrong in test
+1807 wrong on epoch109 of training set
+4,956251588517162 this is average MSE of training set
+174 amount wrong in test
+1807 wrong on epoch110 of training set
+4,956222733345956 this is average MSE of training set
+173 amount wrong in test
+1809 wrong on epoch111 of training set
+4,95619440072288 this is average MSE of training set
+173 amount wrong in test
+1808 wrong on epoch112 of training set
+4,956166576877755 this is average MSE of training set
+172 amount wrong in test
+1810 wrong on epoch113 of training set
+4,956139248495037 this is average MSE of training set
+172 amount wrong in test
+1808 wrong on epoch114 of training set
+4,956112402698636 this is average MSE of training set
+172 amount wrong in test
+1809 wrong on epoch115 of training set
+4,956086027036766 this is average MSE of training set
+172 amount wrong in test
+1808 wrong on epoch116 of training set
+4,956060109466958 this is average MSE of training set
+172 amount wrong in test
+1810 wrong on epoch117 of training set
+4,95603463834115 this is average MSE of training set
+172 amount wrong in test
+1809 wrong on epoch118 of training set
+4,956009602391295 this is average MSE of training set
+172 amount wrong in test
+1809 wrong on epoch119 of training set
+4,955984990715163 this is average MSE of training set
+172 amount wrong in test
+1807 wrong on epoch120 of training set
+4,955960792762797 this is average MSE of training set
+172 amount wrong in test
+1809 wrong on epoch121 of training set
+4,955936998323197 this is average MSE of training set
+172 amount wrong in test
+1811 wrong on epoch122 of training set
+4,955913597511639 this is average MSE of training set
+172 amount wrong in test
+1813 wrong on epoch123 of training set
+4,955890580757398 this is average MSE of training set
+172 amount wrong in test
+1812 wrong on epoch124 of training set
+4,955867938791915 this is average MSE of training set
+172 amount wrong in test
+1812 wrong on epoch125 of training set
+4,955845662637438 this is average MSE of training set
+172 amount wrong in test
+1813 wrong on epoch126 of training set
+4,955823743596208 this is average MSE of training set
+173 amount wrong in test
+1811 wrong on epoch127 of training set
+4,955802173239889 this is average MSE of training set
+173 amount wrong in test
+1813 wrong on epoch128 of training set
+4,955780943399544 this is average MSE of training set
+173 amount wrong in test
+1809 wrong on epoch129 of training set
+4,955760046156081 this is average MSE of training set
+172 amount wrong in test
+1809 wrong on epoch130 of training set
+4,955739473830961 this is average MSE of training set
+172 amount wrong in test
+1809 wrong on epoch131 of training set
+4,955719218977387 this is average MSE of training set
+173 amount wrong in test
+1808 wrong on epoch132 of training set
+4,955699274371763 this is average MSE of training set
+173 amount wrong in test
+1806 wrong on epoch133 of training set
+4,955679633005633 this is average MSE of training set
+174 amount wrong in test
+1807 wrong on epoch134 of training set
+4,955660288077861 this is average MSE of training set
+174 amount wrong in test
+1806 wrong on epoch135 of training set
+4,955641232987128 this is average MSE of training set
+174 amount wrong in test
+1805 wrong on epoch136 of training set
+4,955622461324812 this is average MSE of training set
+174 amount wrong in test
+1803 wrong on epoch137 of training set
+4,955603966868081 this is average MSE of training set
+174 amount wrong in test
+1804 wrong on epoch138 of training set
+4,955585743573357 this is average MSE of training set
+175 amount wrong in test
+1801 wrong on epoch139 of training set
+4,955567785569949 this is average MSE of training set
+175 amount wrong in test
+1802 wrong on epoch140 of training set
+4,955550087154031 this is average MSE of training set
+175 amount wrong in test
+1802 wrong on epoch141 of training set
+4,955532642782802 this is average MSE of training set
+175 amount wrong in test
+1803 wrong on epoch142 of training set
+4,955515447068903 this is average MSE of training set
+175 amount wrong in test
+1804 wrong on epoch143 of training set
+4,955498494775144 this is average MSE of training set
+175 amount wrong in test
+1804 wrong on epoch144 of training set
+4,955481780809317 this is average MSE of training set
+175 amount wrong in test
+1804 wrong on epoch145 of training set
+4,955465300219162 this is average MSE of training set
+175 amount wrong in test
+1807 wrong on epoch146 of training set
+4,955449048187867 this is average MSE of training set
+175 amount wrong in test
+1807 wrong on epoch147 of training set
+4,955433020029306 this is average MSE of training set
+175 amount wrong in test
+1806 wrong on epoch148 of training set
+4,955417211183766 this is average MSE of training set
+175 amount wrong in test
+1806 wrong on epoch149 of training set
+4,955401617213724 this is average MSE of training set
+175 amount wrong in test
+1805 wrong on epoch150 of training set
+4,95538623379985 this is average MSE of training set
+175 amount wrong in test
+1803 wrong on epoch151 of training set
+4,955371056737071 this is average MSE of training set
+175 amount wrong in test
+1801 wrong on epoch152 of training set
+4,955356081930972 this is average MSE of training set
+174 amount wrong in test
+1804 wrong on epoch153 of training set
+4,955341305394064 this is average MSE of training set
+175 amount wrong in test
+1805 wrong on epoch154 of training set
+4,95532672324233 this is average MSE of training set
+175 amount wrong in test
+1803 wrong on epoch155 of training set
+4,95531233169208 this is average MSE of training set
+175 amount wrong in test
+1803 wrong on epoch156 of training set
+4,955298127056635 this is average MSE of training set
+175 amount wrong in test
+1804 wrong on epoch157 of training set
+4,955284105743246 this is average MSE of training set
+175 amount wrong in test
+1804 wrong on epoch158 of training set
+4,955270264250193 this is average MSE of training set
+175 amount wrong in test
+1804 wrong on epoch159 of training set
+4,955256599163928 this is average MSE of training set
+174 amount wrong in test
+1804 wrong on epoch160 of training set
+4,95524310715628 this is average MSE of training set
+174 amount wrong in test
+1804 wrong on epoch161 of training set
+4,955229784981888 this is average MSE of training set
+174 amount wrong in test
+1804 wrong on epoch162 of training set
+4,955216629475621 this is average MSE of training set
+174 amount wrong in test
+1805 wrong on epoch163 of training set
+4,955203637550176 this is average MSE of training set
+173 amount wrong in test
+1805 wrong on epoch164 of training set
+4,955190806193615 this is average MSE of training set
+173 amount wrong in test
+1805 wrong on epoch165 of training set
+4,955178132467181 this is average MSE of training set
+173 amount wrong in test
+1806 wrong on epoch166 of training set
+4,9551656135030075 this is average MSE of training set
+173 amount wrong in test
+1805 wrong on epoch167 of training set
+4,955153246502149 this is average MSE of training set
+172 amount wrong in test
+1805 wrong on epoch168 of training set
+4,955141028732366 this is average MSE of training set
+172 amount wrong in test
+1806 wrong on epoch169 of training set
+4,955128957526323 this is average MSE of training set
+172 amount wrong in test
+1804 wrong on epoch170 of training set
+4,955117030279534 this is average MSE of training set
+173 amount wrong in test
+1804 wrong on epoch171 of training set
+4,955105244448607 this is average MSE of training set
+173 amount wrong in test
+1803 wrong on epoch172 of training set
+4,955093597549496 this is average MSE of training set
+173 amount wrong in test
+1803 wrong on epoch173 of training set
+4,955082087155702 this is average MSE of training set
+173 amount wrong in test
+1804 wrong on epoch174 of training set
+4,95507071089672 this is average MSE of training set
+173 amount wrong in test
+1801 wrong on epoch175 of training set
+4,95505946645635 this is average MSE of training set
+173 amount wrong in test
+1799 wrong on epoch176 of training set
+4,955048351571206 this is average MSE of training set
+173 amount wrong in test
+1799 wrong on epoch177 of training set
+4,955037364029252 this is average MSE of training set
+173 amount wrong in test
+1798 wrong on epoch178 of training set
+4,9550265016682085 this is average MSE of training set
+173 amount wrong in test
+1798 wrong on epoch179 of training set
+4,955015762374451 this is average MSE of training set
+174 amount wrong in test
+1797 wrong on epoch180 of training set
+4,955005144081384 this is average MSE of training set
+174 amount wrong in test
+1797 wrong on epoch181 of training set
+4,954994644768269 this is average MSE of training set
+174 amount wrong in test
+1797 wrong on epoch182 of training set
+4,954984262458906 this is average MSE of training set
+174 amount wrong in test
+1796 wrong on epoch183 of training set
+4,954973995220524 this is average MSE of training set
+174 amount wrong in test
+1795 wrong on epoch184 of training set
+4,954963841162482 this is average MSE of training set
+175 amount wrong in test
+1796 wrong on epoch185 of training set
+4,95495379843519 this is average MSE of training set
+175 amount wrong in test
+1795 wrong on epoch186 of training set
+4,954943865228986 this is average MSE of training set
+175 amount wrong in test
+1795 wrong on epoch187 of training set
+4,954934039773089 this is average MSE of training set
+175 amount wrong in test
+1795 wrong on epoch188 of training set
+4,954924320334491 this is average MSE of training set
+175 amount wrong in test
+1797 wrong on epoch189 of training set
+4,954914705217106 this is average MSE of training set
+175 amount wrong in test
+1797 wrong on epoch190 of training set
+4,954905192760658 this is average MSE of training set
+175 amount wrong in test
+1795 wrong on epoch191 of training set
+4,954895781339809 this is average MSE of training set
+175 amount wrong in test
+1796 wrong on epoch192 of training set
+4,9548864693631955 this is average MSE of training set
+175 amount wrong in test
+1797 wrong on epoch193 of training set
+4,9548772552726 this is average MSE of training set
+175 amount wrong in test
+1794 wrong on epoch194 of training set
+4,9548681375420545 this is average MSE of training set
+175 amount wrong in test
+1793 wrong on epoch195 of training set
+4,954859114677106 this is average MSE of training set
+175 amount wrong in test
+1793 wrong on epoch196 of training set
+4,954850185213857 this is average MSE of training set
+175 amount wrong in test
+1796 wrong on epoch197 of training set
+4,954841347718325 this is average MSE of training set
+175 amount wrong in test
+1797 wrong on epoch198 of training set
+4,954832600785575 this is average MSE of training set
+175 amount wrong in test
+1796 wrong on epoch199 of training set
+4,9548239430391465 this is average MSE of training set
+175 amount wrong in test
+1796 wrong on epoch200 of training set
+4,954815373130162 this is average MSE of training set
+175 amount wrong in test
+1795 wrong on epoch201 of training set
+4,954806889736692 this is average MSE of training set
+175 amount wrong in test
+1793 wrong on epoch202 of training set
+4,954798491563176 this is average MSE of training set
+176 amount wrong in test
+1794 wrong on epoch203 of training set
+4,9547901773396905 this is average MSE of training set
+176 amount wrong in test
+1793 wrong on epoch204 of training set
+4,9547819458213365 this is average MSE of training set
+176 amount wrong in test
+1792 wrong on epoch205 of training set
+4,954773795787612 this is average MSE of training set
+175 amount wrong in test
+1792 wrong on epoch206 of training set
+4,95476572604183 this is average MSE of training set
+175 amount wrong in test
+1791 wrong on epoch207 of training set
+4,954757735410563 this is average MSE of training set
+175 amount wrong in test
+1791 wrong on epoch208 of training set
+4,954749822743074 this is average MSE of training set
+175 amount wrong in test
+1791 wrong on epoch209 of training set
+4,954741986910737 this is average MSE of training set
+175 amount wrong in test
+1790 wrong on epoch210 of training set
+4,954734226806518 this is average MSE of training set
+175 amount wrong in test
+1789 wrong on epoch211 of training set
+4,954726541344569 this is average MSE of training set
+175 amount wrong in test
+1789 wrong on epoch212 of training set
+4,954718929459533 this is average MSE of training set
+175 amount wrong in test
+1789 wrong on epoch213 of training set
+4,954711390106203 this is average MSE of training set
+176 amount wrong in test
+1788 wrong on epoch214 of training set
+4,954703922259062 this is average MSE of training set
+176 amount wrong in test
+1786 wrong on epoch215 of training set
+4,954696524911691 this is average MSE of training set
+176 amount wrong in test
+1785 wrong on epoch216 of training set
+4,9546891970764735 this is average MSE of training set
+176 amount wrong in test
+1785 wrong on epoch217 of training set
+4,9546819377840405 this is average MSE of training set
+176 amount wrong in test
+1785 wrong on epoch218 of training set
+4,954674746082957 this is average MSE of training set
+176 amount wrong in test
+1785 wrong on epoch219 of training set
+4,954667621039252 this is average MSE of training set
+176 amount wrong in test
+1785 wrong on epoch220 of training set
+4,95466056173599 this is average MSE of training set
+176 amount wrong in test
+1784 wrong on epoch221 of training set
+4,954653567272978 this is average MSE of training set
+176 amount wrong in test
+1784 wrong on epoch222 of training set
+4,954646636766307 this is average MSE of training set
+176 amount wrong in test
+1784 wrong on epoch223 of training set
+4,95463976934799 this is average MSE of training set
+176 amount wrong in test
+1784 wrong on epoch224 of training set
+4,9546329641656826 this is average MSE of training set
+176 amount wrong in test
+1785 wrong on epoch225 of training set
+4,9546262203822184 this is average MSE of training set
+176 amount wrong in test
+1786 wrong on epoch226 of training set
+4,954619537175349 this is average MSE of training set
+176 amount wrong in test
+1785 wrong on epoch227 of training set
+4,954612913737429 this is average MSE of training set
+176 amount wrong in test
+1785 wrong on epoch228 of training set
+4,954606349275066 this is average MSE of training set
+176 amount wrong in test
+1784 wrong on epoch229 of training set
+4,954599843008739 this is average MSE of training set
+176 amount wrong in test
+1784 wrong on epoch230 of training set
+4,9545933941726235 this is average MSE of training set
+177 amount wrong in test
+1786 wrong on epoch231 of training set
+4,954587002014201 this is average MSE of training set
+177 amount wrong in test
+1785 wrong on epoch232 of training set
+4,954580665794026 this is average MSE of training set
+177 amount wrong in test
+1787 wrong on epoch233 of training set
+4,954574384785391 this is average MSE of training set
+177 amount wrong in test
+1787 wrong on epoch234 of training set
+4,954568158274118 this is average MSE of training set
+177 amount wrong in test
+1787 wrong on epoch235 of training set
+4,954561985558249 this is average MSE of training set
+177 amount wrong in test
+1787 wrong on epoch236 of training set
+4,954555865947772 this is average MSE of training set
+177 amount wrong in test
+1787 wrong on epoch237 of training set
+4,9545497987644 this is average MSE of training set
+177 amount wrong in test
+1787 wrong on epoch238 of training set
+4,954543783341334 this is average MSE of training set
+177 amount wrong in test
+1787 wrong on epoch239 of training set
+4,9545378190229545 this is average MSE of training set
+177 amount wrong in test
+1787 wrong on epoch240 of training set
+4,954531905164681 this is average MSE of training set
+177 amount wrong in test
+1788 wrong on epoch241 of training set
+4,954526041132686 this is average MSE of training set
+177 amount wrong in test
+1787 wrong on epoch242 of training set
+4,954520226303661 this is average MSE of training set
+177 amount wrong in test
+1785 wrong on epoch243 of training set
+4,954514460064618 this is average MSE of training set
+177 amount wrong in test
+1784 wrong on epoch244 of training set
+4,9545087418127105 this is average MSE of training set
+177 amount wrong in test
+1784 wrong on epoch245 of training set
+4,954503070954973 this is average MSE of training set
+177 amount wrong in test
+1784 wrong on epoch246 of training set
+4,954497446908148 this is average MSE of training set
+177 amount wrong in test
+1783 wrong on epoch247 of training set
+4,954491869098472 this is average MSE of training set
+177 amount wrong in test
+1784 wrong on epoch248 of training set
+4,954486336961479 this is average MSE of training set
+178 amount wrong in test
+1785 wrong on epoch249 of training set
+4,954480849941857 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch250 of training set
+4,954475407493242 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch251 of training set
+4,954470009077982 this is average MSE of training set
+179 amount wrong in test
+1784 wrong on epoch252 of training set
+4,954464654167024 this is average MSE of training set
+178 amount wrong in test
+1784 wrong on epoch253 of training set
+4,9544593422397565 this is average MSE of training set
+178 amount wrong in test
+1784 wrong on epoch254 of training set
+4,954454072783822 this is average MSE of training set
+178 amount wrong in test
+1783 wrong on epoch255 of training set
+4,954448845294927 this is average MSE of training set
+179 amount wrong in test
+1782 wrong on epoch256 of training set
+4,954443659276705 this is average MSE of training set
+179 amount wrong in test
+1783 wrong on epoch257 of training set
+4,954438514240596 this is average MSE of training set
+179 amount wrong in test
+1784 wrong on epoch258 of training set
+4,954433409705596 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch259 of training set
+4,954428345198234 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch260 of training set
+4,954423320252356 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch261 of training set
+4,954418334408978 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch262 of training set
+4,954413387216206 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch263 of training set
+4,9544084782290305 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch264 of training set
+4,95440360700923 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch265 of training set
+4,954398773125226 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch266 of training set
+4,954393976152033 this is average MSE of training set
+179 amount wrong in test
+1786 wrong on epoch267 of training set
+4,954389215670983 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch268 of training set
+4,954384491269788 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch269 of training set
+4,954379802542257 this is average MSE of training set
+179 amount wrong in test
+1783 wrong on epoch270 of training set
+4,954375149088305 this is average MSE of training set
+179 amount wrong in test
+1783 wrong on epoch271 of training set
+4,954370530513737 this is average MSE of training set
+179 amount wrong in test
+1783 wrong on epoch272 of training set
+4,95436594643023 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch273 of training set
+4,954361396455199 this is average MSE of training set
+179 amount wrong in test
+1785 wrong on epoch274 of training set
+4,954356880211657 this is average MSE of training set
+179 amount wrong in test
+1783 wrong on epoch275 of training set
+4,9543523973281545 this is average MSE of training set
+179 amount wrong in test
+1782 wrong on epoch276 of training set
+4,954347947438631 this is average MSE of training set
+179 amount wrong in test
+1782 wrong on epoch277 of training set
+4,954343530182364 this is average MSE of training set
+179 amount wrong in test
+1782 wrong on epoch278 of training set
+4,954339145203832 this is average MSE of training set
+178 amount wrong in test
+1782 wrong on epoch279 of training set
+4,9543347921526815 this is average MSE of training set
+178 amount wrong in test
+1782 wrong on epoch280 of training set
+4,954330470683592 this is average MSE of training set
+178 amount wrong in test
+1782 wrong on epoch281 of training set
+4,954326180456175 this is average MSE of training set
+178 amount wrong in test
+1781 wrong on epoch282 of training set
+4,954321921134912 this is average MSE of training set
+178 amount wrong in test
+1782 wrong on epoch283 of training set
+4,954317692389019 this is average MSE of training set
+178 amount wrong in test
+1782 wrong on epoch284 of training set
+4,954313493892456 this is average MSE of training set
+178 amount wrong in test
+1782 wrong on epoch285 of training set
+4,954309325323727 this is average MSE of training set
+178 amount wrong in test
+1782 wrong on epoch286 of training set
+4,954305186365951 this is average MSE of training set
+178 amount wrong in test
+1783 wrong on epoch287 of training set
+4,95430107670662 this is average MSE of training set
+178 amount wrong in test
+1784 wrong on epoch288 of training set
+4,954296996037601 this is average MSE of training set
+178 amount wrong in test
+1784 wrong on epoch289 of training set
+4,95429294405511 this is average MSE of training set
+178 amount wrong in test
+1784 wrong on epoch290 of training set
+4,954288920459499 this is average MSE of training set
+178 amount wrong in test
+1786 wrong on epoch291 of training set
+4,95428492495535 this is average MSE of training set
+178 amount wrong in test
+1786 wrong on epoch292 of training set
+4,954280957251225 this is average MSE of training set
+178 amount wrong in test
+1785 wrong on epoch293 of training set
+4,954277017059807 this is average MSE of training set
+178 amount wrong in test
+1785 wrong on epoch294 of training set
+4,954273104097597 this is average MSE of training set
+178 amount wrong in test
+1785 wrong on epoch295 of training set
+4,954269218085013 this is average MSE of training set
+178 amount wrong in test
+1784 wrong on epoch296 of training set
+4,954265358746269 this is average MSE of training set
+178 amount wrong in test
+1784 wrong on epoch297 of training set
+4,954261525809405 this is average MSE of training set
+178 amount wrong in test
+1784 wrong on epoch298 of training set
+4,954257719005999 this is average MSE of training set
+178 amount wrong in test
+1784 wrong on epoch299 of training set
+4,95425393807136 this is average MSE of training set
+178 amount wrong in test
+4,954253938071359 this is MSE over all data patterns of train

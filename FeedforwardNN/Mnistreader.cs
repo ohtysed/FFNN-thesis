@@ -10,7 +10,7 @@ using System.Drawing.Imaging;
 namespace FeedforwardNN
 {
     // citation:
-    // https://stackoverflow.com/questions/49407772/reading-mnist-database 
+    // https://stackoverflow.com/questions/49407772/readning-mnist-database 
     class Mnistreader
     {
         //This class reads the dataset, it also has some extensions such as viewimage, which displays an image on png file in the map 'images'

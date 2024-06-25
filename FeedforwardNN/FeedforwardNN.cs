@@ -19,7 +19,7 @@ namespace FeedforwardNN
         public outputlayer outputlayer; 
         public Hiddenlayer hiddenlayer;
 
-        public double learningrate = 0.1;
+        public double learningrate = 0.01;
         public double MSEtrain = 0;
         public double testMSEtrain = 0;
         public double epochs = 1000;
