@@ -26,10 +26,7 @@ namespace FeedforwardNN
             FeedforwardNN network = new FeedforwardNN(trainingData, test_data);
             network.readandtrainpattern();
          
-            Console.WriteLine(  network.MSEerror().ToString()+ " this is MSE over all data patterns of train");
-
-            network.readandtestpattern();
-         
+            Console.WriteLine(  network.MSEerror().ToString()+ " this is MSE over all data patterns of train");        
 
 
         }

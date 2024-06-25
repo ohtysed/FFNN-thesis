@@ -14,6 +14,7 @@ namespace FeedforwardNN
         public FeedforwardNN network;
         public Hiddenlayer hiddenlayer;
         public double MSE; // we want to give the MSE of this whole pattern
+        public double testMSE;
 
 
         public outputlayer(Hiddenlayer Hiddenlayer, FeedforwardNN Network)
@@ -36,6 +37,15 @@ namespace FeedforwardNN
         {
             hiddenlayer.error();
             MSE = hiddenlayer.sumerror;
+        }
+
+        public void testforwardprop() { this.hiddenlayer.forwardprop(); } // we dont have to change the method for forward and activate
+        public void testactivate() { this.hiddenlayer.activate(); } // because it does not use different weights, just different variables and input
+
+        public void testerror()
+        {
+            hiddenlayer.testerror();
+         
         }
 
     }

@@ -21,6 +21,7 @@ namespace FeedforwardNN
 
         public double sumerror = 0;
 
+
         public FeedforwardNN network;
 
         // We receive the input from an object which is the inputlayer and we first make them neurons to perform forwrd prop
@@ -47,7 +48,7 @@ namespace FeedforwardNN
             for (int i = 0; i < nneurons; i++)
             {
                 neurons[i].setneuron(this.il.inputs);
-        }
+            }
 
         }
         
@@ -76,6 +77,25 @@ namespace FeedforwardNN
 
         }
 
+        public double giveerror()
+        {
+            double maxvalue = -1;
+            double maxindex = 0;
+            for (int i = 0; i < Sigmasum.Length; i++)
+            {
+                if (Sigmasum[i] > maxvalue)
+                {
+                    maxvalue = Sigmasum[i];
+
+                    maxindex = i;
+                }
+
+             
+            }
+
+            return maxindex;
+        }
+
 
 
         // so i made a bunch of if else for 0 outputs thinkning it would reproduce a NaN if it would output
@@ -83,17 +103,16 @@ namespace FeedforwardNN
         public void error()
         {
             sumerror = 0; //We need to reset the sumerror from the previous pattern
-            double max = -1; // we say this is the max
-            double output = -1; // this is the output we expect to be the biggest
+
 
             int i = 0;
        
             foreach (var estimate in Sigmasum)
             {
-      
 
                 if (i != il.expect)
                 {
+
                     if (estimate == 0)
                     {
                         sumerror += 0;
@@ -103,12 +122,10 @@ namespace FeedforwardNN
                         sumerror +=  0.5 * (Math.Pow( (-1 - estimate), 2 )); // desired state is -1 if we are not wanting the neuron to activate
                     }
 
-                    if(estimate > max) { max = estimate; } // with this we search for the biggest activated output neuron excluding the neuron we expect
-                   
                 }
                 else
                 {   
-                    output = estimate; // we save the output neuron which we expect, so we compare it with the biggest
+                    
                     if (estimate==0)
                     {
                         sumerror += 0;
@@ -123,10 +140,25 @@ namespace FeedforwardNN
                 i++;
             
             }
-            if (output < max) // small little true true output, namely, if the neuron we found which is excluding the neuron we expect, is bigger then the actual neuron output we want, we have a wrong output
+
+            double maxindex = giveerror();
+            if (maxindex != network.expect)
             {
                 network.wrong += 1;
             }
+
+
+        }
+        public void testerror()
+        {
+     
+            double maxindex = giveerror();
+          //  Console.WriteLine( maxindex + " <- maxindex and expect -> " + network.expect);
+            if (maxindex != network.expect)
+            {
+                network.testwrong += 1;
+            }
+        
 
 
         }
@@ -159,16 +191,15 @@ namespace FeedforwardNN
 
         public void backpropforweights()
         {
-            double derivativeweights = 0;
-            double neuroninput = 0;
+
             foreach (var neuron in this.neurons)
             {
                 for (int i = 0; i < neuron.weights.Length; i++)
                 {
                   //  Console.WriteLine(neuron.weights[i] + " before weight");
                     neuron.weights[i] = neuron.weights[i] - network.learningrate * derivativeweight(neuron.number) * neuron.input[i];
-                    derivativeweights = derivativeweight(neuron.number);
-                    neuroninput = neuron.input[i];
+                  
+        
 
                //   Console.WriteLine(network.learningrate * derivativeweight(neuron.number) * neuron.input[i] + " the supposed change");
                   //  Console.WriteLine(derivativeweight(neuron.number) + " this is the derivateweight");
@@ -206,7 +237,7 @@ namespace FeedforwardNN
         public double number;
         public double sum = 0;
         public double sigmoidsum = 0;
-        public double expected = 0;
+
 
         public double bias;
         public double[] input = new double[28 * 28];

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel.Design;
 using System.Data.Common;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,14 +19,17 @@ namespace FeedforwardNN
         public outputlayer outputlayer; 
         public Hiddenlayer hiddenlayer;
 
-        public double learningrate = 0.01;
+        public double learningrate = 0.1;
         public double MSEtrain = 0;
-        public double epochs = 10000;
+        public double testMSEtrain = 0;
+        public double epochs = 1000;
+
+ 
          
         public int wrong = 0;
-        public int previouswrong = 0;
-        public int alsowrong = 0;
-        public double expect = 0.0;
+        public int testwrong = 0;
+    
+        public int expect = 0;
         public double Experiment; // calculates average of pixels in a set
 
         public Collection<Image> training_data;
@@ -50,10 +55,10 @@ namespace FeedforwardNN
         //
         public void readandtrainpattern() 
         {
-            for (int i = 0;  i < epochs; i++)
+            for (int i = 0;  i < epochs; i++) // the training set was repeated 30 times and not the patterns themselves
             {
-                wrong = 0;
-                foreach (var item in training_data) // the training set was repeated 30 times and not the patterns themselves
+                wrong = 0; // we reset wrong counter after every epoch
+                foreach (var item in training_data) 
                 {
 
                     inputlayer.inputlayer(item.Data);
@@ -64,10 +69,12 @@ namespace FeedforwardNN
                     outputlayer.backprop();
                     Experiment += inputlayer.experiment; 
 
-                } // maybe implement here also error function over all patterns
+                } 
                 Experiment /= training_data.Count();
-                Console.WriteLine((wrong - previouswrong) + " wrong on epoch" + i);
-                previouswrong = wrong;
+                Console.WriteLine((wrong) + " wrong on epoch" + i + " of training set");
+                Console.WriteLine(((MSEtrain/(i+1))/(training_data.Count)) + " this is average MSE of training set");
+                readandtestpattern(); // now we also want to do the test training set to see how well the weight are doing
+            
 
                 // Console.WriteLine(Experiment+ " this is average pixels");
                 //Console.WriteLine(alsowrong + " if output was 1 how many others are also 1");
@@ -78,29 +85,27 @@ namespace FeedforwardNN
 
         public void readandtestpattern()
         {
-            wrong = 0;  // reset all
-            MSEtrain = 0; // errors 
+            testwrong = 0;  // reset all
             foreach (var item in test_data) 
             {
-              
-
                 inputlayer.inputlayer(item.Data);
                 outputlayer.setNeuron();
                 setexpectation(item.Label);
-                active();
-                MSEtrain += outputlayer.MSE;
-                //outputlayer.backprop();
+            //    Console.WriteLine(  item.Label + " actual label");
+              //  Console.WriteLine(expect+ " network label");
+                activetest();
+               
 
             } 
-            Console.WriteLine(wrong + " amount wrong in test");
+            Console.WriteLine(testwrong + " amount wrong in test");
 
         }
 
 
-        public void setexpectation(double expected)
+        public void setexpectation(int expected)
         {
 
-            inputlayer.expect = expected;
+            expect = expected;
 
         }
 
@@ -121,7 +126,13 @@ namespace FeedforwardNN
             return MSEtrain / training_data.Count() / epochs; //  to conclude the final error we divide by total patterns, should only be done at the end
         }
 
+        public void activetest()
+        {
+            outputlayer.testforwardprop();
+            outputlayer.testactivate();
+            outputlayer.testerror();
 
+        }
 
 
         /// <summary>

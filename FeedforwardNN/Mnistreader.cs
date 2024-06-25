@@ -89,9 +89,7 @@ namespace FeedforwardNN
                     height = height,
                 };
             }
-            // idk if this was needed, i did this because of a bug but it turned out it wasnt this but im still keeping it
-            labels.Close();
-            images.Close();
+      
         }
 
     }
